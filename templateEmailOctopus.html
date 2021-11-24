@@ -1,26 +1,374 @@
-<html>
-   <body style="font-family: arial; font-size: 12px;">
-	  <h4>Hello,</h4>
-      <h2>Deployment of #{Octopus.Project.Name} #{Octopus.Release.Number} to #{Octopus.Environment.Name}</h2>
-      <p><em>Deployed by at #{Octopus.Deployment.Created}</em></p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- IMPORTED FROM ZENDESK TEMPLATE -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        margin: 0 auto;
+        padding: 0 0 0 0 !important;
+        font-size: 10pt;
+        font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+        /* line-height: 14px; */
+        color: #303030;
+        max-width: 980px;
+      }
+      table {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        background-color: #eeeeee; /* ? quitar esto*/
+      }
+      td img {
+        display: inline block;
+      }
+
+      h1 {
+        font-size: 30px;
+        /* line-height: 20px; */
+        margin: auto;
+        text-align: center;
+        background-color: salmon;
+        width: 580px;
+      }
+
+      #main_image {
+        margin: auto;
+      }
+
+      h2,
+      #subtitle_text {
+        background-color: skyblue;
+        text-align: center;
+        /* max-width: 485px; */
+		width: 500px;
+		max-width: 100%;
+        margin: auto;
+        font-size: 20px;
+      }
+
+      #subtitle_text {
+        background-color: royalblue;
+        font-size: 18px;
+      }
+      .button {
+        padding: 8px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 4px;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      #contact_button,
+      #contact_button:hover,
+      #contact_button:visited,
+      #contact_button:active {
+        background-color: #e08302;
+        color: white;
+
+        /* font-weight: 600; */
+        /* font-family: "Open Sans" */
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        background-color: yellowgreen;
+      }
+      #main_text {
+        font-size: 20px;
+        background-color: violet;
+      }
+
+      #did_you_know_header {
+        font-weight: 500;
+      }
+
+      #did_you_know_header,
+      #did_you_know {
+        font-size: 20px;
+        background-color: violet;
+      }
 	  
-	  <p><em>The website was deployed to</em></p>
-	  <p><a href="#">#</a></p>
-	  <p><a href="#">#</a></p>
-	  
-	  <h4>Release notes:</h4>
-	  
-	  #{if Octopus.Release.Notes}
-		<p>
-		  #{Octopus.Release.Notes}
-		</p>
-      #{/if}
-	  #{unless Octopus.Release.Notes}
-		<p style="background-color:grey;padding:20px;">These are no changes found</p>
-	  #{/unless}
-	  
-	  <br>
-	  <h4>Regards,</h4>
-	  <p>/Octox Automate Build System</p>
-   </body>
+      #read_more_button,
+      #read_more_button:hover,
+      #read_more_button:visited,
+      #read_more_button:active {
+        background-color: #e6e6e6;
+		color: #2b3e4d;
+		padding-top: 19px;
+		padding-bottom: 19px;
+		border-color: #2B3E4D;
+		border-style: solid;
+		border-width: 1px;
+      }
+    </style>
+    <!-- END IMPORTED FROM ZENDESK TEMPLATE -->
+
+    <title>iGERENT</title>
+  </head>
+  <body>
+    <table width="100%" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+      <!-- LOGO ROW-->
+      <tr>
+        <td colspan="3" style="text-align: center;">
+          <img
+            src="iGERENT_logo.png"
+            alt="E-mail"
+            width="323px"
+            height="85px"
+            style="margin: 5px auto"
+          />
+        </td>
+      </tr>
+
+      <!-- MAIN TITLE ROW -->
+      <tr>
+        <td colspan="3" , style="background-color: seagreen">
+          <h1>The United Arab Emirates Joined the Madrid System for Trademark Registration</h1>
+        </td>
+      </tr>
+
+      <!-- IMAGE AND SUBTITLE TEXT ROW -->
+      <tr >
+        <td colspan="3"   style="background-color: rosybrown; text-align: center; vertical-align: middle;">
+          <img
+            id="main_image"
+            src="Main image.png"
+            alt="main Image"
+            width="302px"
+            ,height="247px"
+			style="display: inline-block; background-color: chartreuse;"
+          />
+        <span style=" display: inline-block;  vertical-align:top;  ">
+
+			<h2 id="subtitle" >
+				Are you a trademark owner looking to expand to the United Arab Emirates and wishing to
+				file a trademark application in that country? We can help you.
+			</h2>
+			<p id="subtitle_text" >
+				From On December 28, 2021, the Madrid Protocol will enter into force in the United Arab
+				Emirates. This means that from this date, filing trademark applications in the UAE will
+				be greatly simplified for foreign applicants from other Madrid protocol signatories.
+			</p>
+		</span>
+        </td>
+      </tr>
+
+      <!-- CONTACT BUTTON ROW-->
+      <tr>
+        <td colspan="3" , style="background-color: red; text-align: center; padding: 15px">
+          <a class="button" id="contact_button" href="mailto:contact@igerent.com" alt="E-mail"
+            >Contact Us</a
+          >
+        </td>
+      </tr>
+
+      <!-- MAIN TEXT ROW -->
+      <tr>
+        <td colspan="3" , style="background-color: springgreen; padding: 15px">
+          <h3 id="Motto">At iGERENT we want to help you protect your brand in any way we can.</h3>
+          <p id="main_text">
+            Contact us to discover if you are eligible to use the Madrid system to file a trademark
+            application in the United Arab Emirates and receive a quote.
+          </p>
+          <p id="main_text">
+            Do not forgot to order a trademark search in the United Arab Emirates to evaluate its
+            probability of successful registration. You can get up to 30% discount on your trademark
+            search if you order it now! Mention the code UAEMADRID30 when you contact us to enjoy
+            it.
+          </p>
+          <p id="did_you_know_header">DID YOU KNOW?</p>
+          <p id="did_you_know">
+            The United Arab Emirates is the third country of the Gulf Cooperation Council (GCC),
+            alongside Bahrain and Oman, to join the Madrid Union.
+          </p>
+        </td>
+      </tr>
+      <!-- READ MORE BUTTON ROW-->
+      <tr>
+        <td colspan="3" , style="background-color: red; text-align: center; padding: 25px">
+          <a class="button" id="read_more_button" href="" alt="Read mor"
+            >Read more about the Madrid System for Trademark Registration</a
+          >
+        </td>
+      </tr>
+
+      <!-- FOOTER HEADER PRHASE ROW  -->
+      <tr>
+        <td
+          colspan="3"
+          style="
+            text-align: center;
+            font-size: 18px;
+            font-family: Roboto, 'Lucida Grande', Verdana, Arial, sans-serif;
+
+            background-color: #2b3e4d;
+            color: white;
+            line-height: 19px;
+            padding-top: 17px;
+            padding-left: 10px;
+            padding-right: 10px;
+          "
+        >
+          Contact us using one of the following options:
+        </td>
+      </tr>
+
+      <!-- BLOCKS ROW -->
+      <tr
+        style="
+          border-collapse: collapse;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #2b3e4d;
+        "
+      >
+        <td colspan="3">
+          <!-- EMAIL BLOCK -->
+          <table style="display: inline">
+            <tr>
+              <!-- <td style="background-color: cornflowerblue"> -->
+              <td style="padding-left: 10px">
+                <a href="mailto:contact@igerent.com" rel="noreferrer" target="_blank">
+                  <img src="https://igerent.com/email.png" alt="E-mail" width="45px" height="45px"
+                /></a>
+              </td>
+              <td>
+                <p
+                  style="
+                    color: white;
+                    font-family: Roboto, 'Lucida Grande', Verdana, Arial, sans-serif;
+                    line-height: 17px;
+                    max-width: 170px;
+                    padding-left: 5px;
+                    padding-right: 10px;
+                    text-align: left;
+                  "
+                >
+                  <a
+                    href="mailto:contact@igerent.com"
+                    rel="noreferrer"
+                    target="_blank"
+                    style="color: white; text-decoration: none"
+                  >
+                    Reply to this email or write to contact@igerent.com
+                  </a>
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <!-- CHAT BLOCK -->
+          <table style="display: inline">
+            <tr>
+              <!-- <td style="background-color: cornflowerblue"> -->
+              <td style="padding-left: 10px">
+                <a href="https://igerent.com" rel="noreferrer" target="_blank">
+                  <img src=" https://igerent.com/chat.png" alt="Chat" width="45px" height="45px"
+                /></a>
+              </td>
+              <td>
+                <p
+                  style="
+                    color: white;
+                    font-family: Roboto, 'Lucida Grande', Verdana, Arial, sans-serif;
+                    line-height: 17px;
+                    max-width: 170px;
+                    padding-left: 5px;
+                    padding-right: 10px;
+                    text-align: left;
+                  "
+                >
+                  <a
+                    href="https://igerent.com"
+                    rel="noreferrer"
+                    target="_blank"
+                    style="color: white; text-decoration: none"
+                  >
+                    Head over to igerent.com and use our live chat
+                  </a>
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <!-- PHONE BLOCK -->
+          <table style="display: inline">
+            <tr>
+              <!-- <td style="background-color: cornflowerblue"> -->
+              <td style="padding-left: 10px">
+                <a href="tel:+1(305)257-9442" rel="noreferrer" target="_blank">
+                  <img src=" https://igerent.com/phone.png" alt="Phone" width="45px" height="45px"
+                /></a>
+              </td>
+              <td>
+                <p
+                  style="
+                    color: white;
+                    font-family: Roboto, 'Lucida Grande', Verdana, Arial, sans-serif;
+                    line-height: 17px;
+                    max-width: 170px;
+                    padding-left: 5px;
+                    padding-right: 10px;
+                    text-align: left;
+                  "
+                >
+                  <a
+                    href="tel:+1(305)257-9442"
+                    rel="noreferrer"
+                    target="_blank"
+                    style="color: white; text-decoration: none"
+                  >
+                    Call us: +1 (305) 257-9442 or +34 910 816 904
+                  </a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- CONFIDENTIALITY ROW -->
+      <tr>
+        <td
+          style="
+            font-family: Roboto, 'Lucida Grande', Verdana, Arial, sans-serif;
+            text-align: left;
+            font-size: 12px;
+
+            line-height: 14px;
+            color: #6f6f6f;
+            background-color: white;
+          "
+          colspan="3"
+        >
+          <p style="max-width: 800px; margin: auto">
+            CONFIDENTIALITY NOTICE: If you are not the intended recipient you are notified that
+            disclosing, copying, distributing or taking any action in reliance on the contents of
+            this information is strictly prohibited. If you have received this email in error,
+            please kindly notify the sender or
+            <a
+              href="mailto:contact@igerent.com"
+              rel="noreferrer"
+              target="_blank"
+              style="color: #6f6f6f; text-decoration: none"
+              >contact@igerent.com</a
+            >
+            immediately and DESTROY the material received.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
