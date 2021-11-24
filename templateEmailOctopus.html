@@ -1,12 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+   <body style="font-family: arial; font-size: 12px;">
+	  <h4>Hello,</h4>
+      <h2>Deployment of #{Octopus.Project.Name} #{Octopus.Release.Number} to #{Octopus.Environment.Name}</h2>
+      <p><em>Deployed by at #{Octopus.Deployment.Created}</em></p>
+	  
+	  <p><em>The website was deployed to</em></p>
+	  <p><a href="#">#</a></p>
+	  <p><a href="#">#</a></p>
+	  
+	  <h4>Release notes:</h4>
+	  
+	  #{if Octopus.Release.Notes}
+		<p>
+		  #{Octopus.Release.Notes}
+		</p>
+      #{/if}
+	  #{unless Octopus.Release.Notes}
+		<p style="background-color:grey;padding:20px;">These are no changes found</p>
+	  #{/unless}
+	  
+	  <br>
+	  <h4>Regards,</h4>
+	  <p>/Octox Automate Build System</p>
+   </body>
 </html>
