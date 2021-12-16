@@ -14,7 +14,14 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
-
+    <style type="text/css">
+      /* We need this when the screen is too small */
+     /*  REMOVE @media only screen and (max-width: 395px) {
+        #subtitle_block {
+          width: 300px;
+        }
+      } */
+    </style>
     <title>iGERENT</title>
   </head>
   <body
@@ -23,24 +30,18 @@
       font-family: Roboto, Lucida Grande, Verdana, Arial, sans-serif;
       color: #303030;
       width: 100%;
+      min-width: 320px;
       margin: 0 auto;
       padding: 0 0 0 0 !important;
+      text-align: center;
     "
   >
     <!-- STYLING -->
-    <style type="text/css">
-      /* We need this when the screen is too small */
-      @media only screen and (max-width: 395px) {
-        #subtitle_block {
-          width: 300px;
-        }
-      }
-    </style>
 
     <!-- PRINCIPAL LAYOUT TABLE -->
     <table
       id="layout_main"
-      max-width="600px"
+      
       cellpadding="0"
       cellspacing="0"
       style="
@@ -49,6 +50,8 @@
         min-width: 320px;
         margin: 0 auto;
         padding: 0;
+        background-color: violet;
+        display: block;
       "
     >
       <tbody>
@@ -62,9 +65,9 @@
                     <img
                       id="logo"
                       src="https://wizars.github.io/EmailOctopus/iGERENT_logo.png"
-                      alt="E-mail"
-                      width="220px"
-                      height="58px"
+                      alt="E-mail"      
+                      width="220"                
+                      style="width: 220px;"
                     />
                   </td>
                 </tr>
@@ -80,11 +83,12 @@
             <table width="100%" cellpadding="0" cellspacing="0">
               <tbody>
                 <tr>
-                  <td style="text-align: center;">
+                  <td style="text-align: center">
                     <h1
                       id="title"
                       style="
                         font-size: 22px;
+                        font-weight: bold;
                         font-weight: 500;
                         line-height: 28px;
                         text-align: center;
@@ -125,6 +129,7 @@
                       style="
                         display: inline-block;
                         vertical-align: top;
+                        max-width: 100%;
                         width: 380px;
                         margin: 0 0px;
                       "
@@ -133,10 +138,10 @@
                       cellspacing="0"
                     >
                       <tr>
-                        <td>
+                        <td style="padding-left: 20px; padding-right: 20px;">
                           <h2
                             id="subtitle"
-                            style="font-size: 16px; font-weight: 500; margin: 2px 0 2px 0"
+                            style="font-size: 16px; font-weight: 700; text-align: center; "
                           >
                             Are you a trademark owner looking to expand to the United Arab Emirates
                             and wishing to file a trademark application in that country? We can help
@@ -145,8 +150,8 @@
                         </td>
                       </tr>
                       <tr>
-                        <td>
-                          <p id="subtitle_text" style="font-size: 14px; margin: 15px 0 2px 0">
+                        <td style="padding-left: 20px; padding-right: 20px;">
+                          <p id="subtitle_text" style="font-size: 14px; margin: 15px 0 2px 0; text-align: center;">
                             From On December 28, 2021, the Madrid Protocol will enter into force in
                             the United Arab Emirates. This means that from this date, filing
                             trademark applications in the UAE will be greatly simplified for foreign
@@ -168,36 +173,59 @@
         <tr>
           <td>
             <!---->
-            <table width="100%" cellpadding="0" cellspacing="0">
+            <table align="center" width="100%" cellpadding="0" cellspacing="0">
               <tbody>
                 <tr>
                   <td
                     style="
                       text-align: center;
-                      padding: 20px 0 15px 0;
+                      padding: auto 0;
                       background-color: transparent;
+                      margin-left: auto;
+                      margin-right: auto;
                     "
                   >
-                    <a
-                      class="button"
-                      id="contact_button"
-                      href="https://igerent.com#contact-us-form"
-                      alt="Contact U"
-                      target="_blank"
-                      style="
-                        padding: 8px;
-                        padding-left: 20px;
-                        padding-right: 20px;
-                        border-radius: 4px;
-                        text-decoration: none;
-                        font-family: Open Sans, Roboto, sans-serif;
-                        font-size: 16px;
-                        font-weight: 600;
-                        color: white;
-                        background-color: #e08302;
-                      "
-                      >Contact Us</a
+                    <table
+                      cellpadding="0"
+                      cellspacing="20"
+                      style="margin-left: auto; margin-right: auto"
                     >
+                      <tbody>
+                        <tr>
+                          <td
+                            style="
+                              display: block;
+                              text-align: center;
+                              background-color: #e08302;
+                              border-radius: 4px;
+                              -webkit-border-radius: 4px;
+                              -moz-border-radius: 4px;
+                              padding-left: 12px;
+                              padding-right: 12px;
+                              padding-top: 0.6em;
+                              padding-bottom: 0.6em;
+                            "
+                          >
+                            <a
+                              class="button"
+                              id="contact_button"
+                              href="https://igerent.com#contact-us-form"
+                              alt="Contact U"
+                              target="_blank"
+                              style="
+                                color: white;
+                                text-decoration: none;
+                                font-family: Open Sans, Roboto, sans-serif;
+                                font-size: 16px;
+                                font-weight: 600;
+                                display: inline-block;
+                              "
+                              >Contact Us</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </td>
                 </tr>
               </tbody>
@@ -229,7 +257,7 @@
                       now! Mention the code <strong>UAEMADRID30</strong> when you contact us to
                       enjoy it.
                     </p>
-                    <p id="did_you_know_header" style="font-weight: 500">DID YOU KNOW?</p>
+                    <p id="did_you_know_header" style="font-size: 16px; font-weight: 700; ">DID YOU KNOW?</p>
                     <p id="did_you_know" style="font-size: 16px">
                       The United Arab Emirates is the third country of the Gulf Cooperation Council
                       (GCC), alongside Bahrain and Oman, to join the Madrid Union.
@@ -245,36 +273,76 @@
         <!-- READ MORE BUTTON ROW ------------------------------------------------------------- -->
         <tr>
           <td>
-            <table width="100%" cellpadding="0" cellspacing="0">
+            <table align="center" width="100%" cellpadding="0" cellspacing="0">
               <tbody>
                 <tr>
-                  <td style="text-align: center; padding: 15px 0 25px 0">
-                    <a
-                      class="button"
-                      id="read_more_button"
-                      href="https://igerent.com/what-trademark-madrid-system"
-                      alt="Read more"
-                      target="_blank"
+                  <td
+                    style="
+                      text-align: center;
+                      padding: 20px 0px 25px 0;
+                      text-align: center;
+                      padding: auto 0;
+                      background-color: transparent;
+                      margin-left: auto;
+                      margin-right: auto;
+                      background-color: tomato;
+                    "
+                  >
+                    <table
+                      align="center"
+                      width="90%"
+                      cellpadding="0"
+                      cellspacing="0"
                       style="
+                        margin-left: auto;
+                        margin-right: auto;
                         max-width: 90%;
-                        padding: 8px;
-                        padding-left: 20px;
-                        padding-right: 20px;
-                        padding-top: 0.8em;
-                        padding-bottom: 0.8em;
-                        border-width: 1px;
-                        border-radius: 4px;
-                        border-color: #2b3e4d;
-                        border-style: solid;
-                        font-size: 16px;
-                        color: #2b3e4d;
-                        text-decoration: none;
-                        background-color: #e6e6e6;
-                        display: inline-block;
                       "
                     >
-                      Read more about the Madrid System for Trademark Registration</a
-                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            style="
+                              display: block;
+                              text-align: center;
+                              max-width: 100%;
+
+                              border-width: 1px;
+                              border-radius: 4px;
+                              -webkit-border-radius: 4px;
+                              -moz-border-radius: 4px;
+
+                              border-color: #2b3e4d;
+                              border-style: solid;
+
+                              font-size: 16px;
+                              background-color: #e6e6e6;
+                              padding-left: 12px;
+                              padding-right: 12px;
+                              padding-top:0.6em;
+                              padding-bottom: 0.6em;
+                            "
+                          >
+                            <a
+                              class="button"
+                              id="read_more_button"
+                              href="https://igerent.com/what-trademark-madrid-system"
+                              alt="Read more"
+                              target="_blank"
+                              style="
+                                color: #2b3e4d;
+                                text-decoration: none;
+                                display: inline-block;
+                                margin-bottom: 0.8em;
+                                margin-top: 0.8em;
+                              "
+                            >
+                              Read more about the Madrid System for Trademark Registration</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </td>
                 </tr>
               </tbody>
